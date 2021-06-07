@@ -9,6 +9,20 @@
     <h1>My Webpage</h1>
     <p>Hello world</p>
     <p>今日の運勢は{{fortune}}です</p>
+    {% if fortune =="大吉" %}
+    <p>おめでとう</p>
+    {% elif fotune == "中吉" %}
+    <p>もう一歩</p>
+    {% else %}
+    <p>再度読み込みしてみてね</p>
+    {% endif %}
+    <p>このページでは、占いの結果として表示されるのは以下の通りです
+        <ul>
+             {% for x in fortune_list %}
+            <li>{{x}}</li>
+            {% endfor %}
+        </ul>
+    </p>
 
 </body>
 </html>
