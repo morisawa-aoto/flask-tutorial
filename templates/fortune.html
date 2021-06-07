@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>My Webpage</title>
+</head>
+<body>
+    <p>これからの運勢を表示します</p>
+    <table border ="1">
+        <thead>
+            <tr>日付</tr>
+            <tr>運勢</tr>
+        </thead>
+        <tbody>
+            {% for unsei in fortune_list %}
+            <tr>
+                <td>{{unsei.day}}</td>
+                <td>{{unsei.fortune}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
